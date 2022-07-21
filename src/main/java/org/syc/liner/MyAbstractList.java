@@ -8,27 +8,6 @@ public abstract class MyAbstractList<E> implements IList<E> {
     protected static final Objects[] EMPTY_ELEMENTS = {};
 
     /**
-     * Constructs an empty list with the specified initial capacity.
-     *
-     * @param capacity the initial capacity of the list
-     * @throws IllegalArgumentException if the initial capacity is negative
-     */
-    public MyAbstractList(int capacity) {
-        if (capacity < 0) {
-            throw new IllegalArgumentException("Illegal capacity:" + capacity);
-        } else {
-            elementData = new Object[capacity];
-        }
-    }
-
-    /**
-     * Constructs an empty list with an initial capacity of {@link #DEFAULT_CAPACITY}
-     */
-    public MyAbstractList() {
-        this(DEFAULT_CAPACITY);
-    }
-
-    /**
      * The size of the MyArrayList(the number of elements it contains.).
      */
     protected int size = 0;

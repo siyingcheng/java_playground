@@ -3,6 +3,26 @@ package org.syc.liner;
 import java.util.Arrays;
 
 public class MyArrayList<E> extends MyAbstractList<E> {
+    /**
+     * Constructs an empty list with the specified initial capacity.
+     *
+     * @param capacity the initial capacity of the list
+     * @throws IllegalArgumentException if the initial capacity is negative
+     */
+    public MyArrayList(int capacity) {
+        if (capacity < 0) {
+            throw new IllegalArgumentException("Illegal capacity:" + capacity);
+        } else {
+            elementData = new Object[capacity];
+        }
+    }
+
+    /**
+     * Constructs an empty list with an initial capacity of {@link #DEFAULT_CAPACITY}
+     */
+    public MyArrayList() {
+        this(DEFAULT_CAPACITY);
+    }
 
     @Override
     public void add(E e) {
