@@ -80,4 +80,14 @@ public class TestMyArrayList {
         Assert.assertEquals(oldElement, 22);
         Assert.assertEquals(list.get(1), 99);
     }
+
+    @Test(testName = "The test insert elements into list.")
+    public void tesst09() {
+        list.add(0, 1);
+        Assert.assertEquals(1, list.get(0));
+        list.add(2, 2);
+        Assert.assertEquals(2, list.get(2));
+        list.add(list.size(), 3);
+        Assert.assertEquals(3, list.get(list.size() - 1));
+    }
 }

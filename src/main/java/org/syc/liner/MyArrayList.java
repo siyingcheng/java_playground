@@ -85,12 +85,15 @@ public class MyArrayList<E> implements IList<E> {
 
     @Override
     public void add(int index, E e) {
-        checkIndex(index);
-        if (size == elementData.length) {
-            grow();
-        }
+        checkIndexForAdd(index);
+        ensureCapacity();
         System.arraycopy(elementData, index, elementData, index + 1, size - index);
         elementData[index] = e;
+        size++;
+    }
+
+    private void checkIndexForAdd(int index) {
+        Objects.checkIndex(index, size + 1);
     }
 
     /**
