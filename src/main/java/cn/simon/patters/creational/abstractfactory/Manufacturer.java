@@ -1,11 +1,7 @@
 package cn.simon.patters.creational.abstractfactory;
 
-public abstract class GpuManufacturer {
-    public Component assembleGpu() {
-        Component gpu = createGpu();
-        gpu.assemble();
-        return gpu;
-    }
+public abstract class Manufacturer {
+    public abstract Gpu createGpu();
 
-    public abstract Component createGpu();
+    public abstract Monitor createMonitor();
 }
