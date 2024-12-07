@@ -1,4 +1,4 @@
-package cn.simon.patters.creational;
+package cn.simon.patters.creational.singleton;
 
 public class Singleton {
     private static volatile Singleton instance = null;

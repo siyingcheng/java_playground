@@ -1,2 +1,5 @@
-package cn.simon.patters.creational.abstractfactory;public class Gpu {
+package cn.simon.patters.creational.abstractfactory;
+
+public interface Gpu {
+    void assemble();
 }
